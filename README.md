@@ -38,6 +38,7 @@ The training and validation loss curves were tracked using TensorBoard to monito
 
 **Figure 1: Training and validation loss curves for both models, tracked using TensorBoard.**  
 ![Training and Validation Loss](https://raw.githubusercontent.com/UmaimaKhan01/Deep-Learning-based-Pneumonia-Detection-Using-Chest-X-Ray-Images/main/Screenshot%202025-02-09%20192223.png)
+![Metrics](https://github.com/UmaimaKhan01/Deep-Learning-based-Pneumonia-Detection-Using-Chest-X-Ray-Images/blob/main/Screenshot%202025-02-09%20192111.png?raw=true)
 
 ### Grad-CAM Visualizations
 Grad-CAM was used to generate visual explanations for the model's predictions, helping identify misclassified cases and understand decision-making.
