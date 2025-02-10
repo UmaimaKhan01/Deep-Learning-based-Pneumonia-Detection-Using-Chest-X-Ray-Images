@@ -8,18 +8,24 @@ This project implements a deep learning system for automated pneumonia detection
 The fine-tuned model achieved 86.2% accuracy on the test set, demonstrating the effectiveness of transfer learning for medical image analysis.
 
 ## Dataset
-The project uses the Chest X-Ray Images (Pneumonia) dataset from Kaggle, containing 5,863 grayscale X-ray images:
+The project uses a subset of the Chest X-Ray Images (Pneumonia) dataset from Kaggle. While the full dataset contains 5,863 grayscale X-ray images, we used a reduced version to accommodate GPU memory constraints and reduce training time:
+
+Original dataset size:
 - Training set: 5,216 images
 - Validation set: 16 images
 - Test set: 624 images
 
-Each image is classified as either "Normal" or "Pneumonia".
+### Dataset Subsampling
+To manage computational resources effectively:
+- Every 10th image was selected from each set
+- This significantly reduced memory usage and training time
+- Allowed for faster experimentation and iteration
+- Made the project feasible with limited GPU resources
 
 ### Data Processing
-- Images are resized to 128 × 128 pixels
+- Images are resized to 128 × 128 pixels (reduced from original size for memory efficiency)
 - Normalization using ImageNet statistics (μ = [0.485, 0.456, 0.406], σ = [0.229, 0.224, 0.225])
 - Data augmentation: random horizontal flipping (p=0.5) and rotations (±10°)
-- Dataset is subsampled (every 10th image) to reduce computational costs
 
 ## Requirements
 ```
@@ -41,7 +47,7 @@ The system uses ResNet-18 architecture with two implementation approaches:
 - Binary classification output layer
 - Hyperparameters:
   - Learning rate: 0.001
-  - Batch size: 16
+  - Batch size: 16 (optimized for limited GPU memory)
   - Optimizer: Adam
   - Loss function: Binary Cross-Entropy
   - Training epochs: 5
@@ -64,6 +70,8 @@ The system uses ResNet-18 architecture with two implementation approaches:
 - Normal class accuracy: 84.5%
 - Pneumonia class accuracy: 87.9%
 
+Note: These results are based on the subsampled dataset and might vary with the full dataset.
+
 ## Visualization
 The project includes:
 - Training and validation loss curves tracked via TensorBoard
@@ -77,9 +85,15 @@ The project includes:
 - Comprehensive error analysis
 
 ## Limitations and Future Work
-- Dataset size and potential imbalance issues
+- Dataset limitations:
+  - Using subset of data due to computational constraints
+  - Potential impact on model generalization
+  - Results might improve with full dataset usage
 - Overfitting in the from-scratch model
 - Opportunities for improvement:
+  - Access to more computational resources to utilize full dataset
+  - Implementing more efficient data loading and processing
+  - Exploring model compression techniques
   - Acquiring larger, more diverse datasets
   - Implementing additional regularization techniques
   - Exploring advanced architectures (e.g., Vision Transformers)
