@@ -44,7 +44,7 @@ The training and validation loss curves were tracked using TensorBoard to monito
 Grad-CAM was used to generate visual explanations for the model's predictions, helping identify misclassified cases and understand decision-making.
 
 **Figure 2: Grad-CAM visualizations of misclassified cases.**  
-[![Grad-CAM Visualizations](https://raw.githubusercontent.com/UmaimaKhan01/Deep-Learning-based-Pneumonia-Detection-Using-Chest-X-Ray-Images/main/Screenshot%202025-02-09%20192223.png)](https://github.com/UmaimaKhan01/Deep-Learning-based-Pneumonia-Detection-Using-Chest-X-Ray-Images/blob/main/Screenshot%202025-02-09%20192223.png)
+[![Grad-CAM Visualizations]([https://raw.githubusercontent.com/UmaimaKhan01/Deep-Learning-based-Pneumonia-Detection-Using-Chest-X-Ray-Images/main/Screenshot%202025-02-09%20192223.png)](https://github.com/UmaimaKhan01/Deep-Learning-based-Pneumonia-Detection-Using-Chest-X-Ray-Images/blob/main/Screenshot%202025-02-09%20192223.png](https://github.com/UmaimaKhan01/Deep-Learning-based-Pneumonia-Detection-Using-Chest-X-Ray-Images/blob/main/Picture1.jpg))
 
 ## Key Features
 - Automated pneumonia detection from chest X-rays
