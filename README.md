@@ -1,4 +1,3 @@
-
 ## Model Architecture
 The system uses ResNet-18 architecture with two implementation approaches:
 
@@ -38,13 +37,13 @@ Note: These results are based on the subsampled dataset and might vary with the 
 The training and validation loss curves were tracked using TensorBoard to monitor model convergence.
 
 **Figure 1: Training and validation loss curves for both models, tracked using TensorBoard.**  
-![Training and Validation Loss]("C:\Users\umaim\OneDrive\Pictures\Screenshots\Screenshot 2025-02-09 192223.png")
+![Training and Validation Loss](https://raw.githubusercontent.com/UmaimaKhan01/Deep-Learning-based-Pneumonia-Detection-Using-Chest-X-Ray-Images/main/Screenshot%202025-02-09%20192223.png)
 
 ### Grad-CAM Visualizations
 Grad-CAM was used to generate visual explanations for the model's predictions, helping identify misclassified cases and understand decision-making.
 
 **Figure 2: Grad-CAM visualizations of misclassified cases.**  
-[![Grad-CAM Visualizations](path/to/figure2.png)](https://github.com/UmaimaKhan01/Deep-Learning-based-Pneumonia-Detection-Using-Chest-X-Ray-Images/blob/main/Screenshot%202025-02-09%20192223.png)
+[![Grad-CAM Visualizations](https://raw.githubusercontent.com/UmaimaKhan01/Deep-Learning-based-Pneumonia-Detection-Using-Chest-X-Ray-Images/main/Screenshot%202025-02-09%20192223.png)](https://github.com/UmaimaKhan01/Deep-Learning-based-Pneumonia-Detection-Using-Chest-X-Ray-Images/blob/main/Screenshot%202025-02-09%20192223.png)
 
 ## Key Features
 - Automated pneumonia detection from chest X-rays
